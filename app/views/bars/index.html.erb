@@ -1,1 +1,10 @@
 <h1>home page lol</h1>
+
+<% @bars.each do |bar| %>
+
+  <li><%= bar.name %></li>
+  <li><%= bar.happytime %></li>
+  <li><%= bar.address %></li>
+  <li><%= bar.ontap %></li>
+
+<% end %>
