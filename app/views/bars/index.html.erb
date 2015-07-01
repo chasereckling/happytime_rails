@@ -1,10 +1,20 @@
-<h1>home page lol</h1>
+<h4>Current Happy Times</h4>
 
 <% @bars.each do |bar| %>
+  <div id="bars">
+    <div class="bars-col" >
+      <li><%= bar.name %></li>
+      <li><%= bar.happytime %></li>
+    </div>
 
-  <li><%= bar.name %></li>
-  <li><%= bar.happytime %></li>
-  <li><%= bar.address %></li>
-  <li><%= bar.ontap %></li>
+    <div class="bars-col" >
+      <li><%= bar.address %></li>
+    <div class="accordion horizontal">
+      <section>
+        <li><%= bar.ontap %></li>
+      </section>
+    </div>  
+    </div>
+  </div>
 
 <% end %>
