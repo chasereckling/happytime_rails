@@ -1,6 +1,6 @@
 class Bar < ActiveRecord::Migration
   def change
-    create_table :bars do |t|
+    create_table :posts do |t|
       t.column :name, :string
       t.column :happytime, :string
       t.column :address, :string
