@@ -1,21 +1,21 @@
 <h4>Current Happy Times</h4>
 
 <% @bars.each do |bar| %>
-  <section class="ac-container">
-    <input id="ac-1" name="accordion-1" type="checkbox" />
-    <div id="bars">
-      <article class="ac-small">
-        <div class="bars-col" >
-          <label for="ac-1"><%= bar.name %></label>
-          <li><%= bar.happytime %></li>
-        </div>
 
-      <div class="bars-col" >
-        <li><%= bar.address %></li>
-        <section>
-          <li><%= bar.ontap %></li>
-      </div>
-      </div>
-    </article>
-  </section>
+<div class="panel-title" data-toggle="collapse" data-target="#<%= bar.id %>">
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+             <h4><%= bar.name %></h4>
+             <h5><%= bar.happytime %></h5>
+          <p><%= bar.address %></p>
+        </div>
+        <div id="<%= bar.id %>" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p><%= bar.ontap %></p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
 <% end %>
