@@ -15,3 +15,13 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    var hour = new Date().getHours();
+    var divs = $('.title-bar');
+    if (hour >= 0 && hour < 12) {
+        divs.addClass('green-bg');
+    } else if (hour >= 12 && hour < 23) {
+        divs.addClass('red-bg');
+    }
+});
