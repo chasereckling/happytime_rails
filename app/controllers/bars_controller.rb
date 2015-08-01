@@ -38,6 +38,6 @@ class BarsController < ApplicationController
 
   private
   def bar_params
-    params.require(:bar).permit(:name, :happytime, :address, :ontap)
+    params.require(:bar).permit(:name, :happyHourStart, :happyHourEnd, :address, :ontap)
   end
 end
